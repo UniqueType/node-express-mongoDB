@@ -1,0 +1,17 @@
+{
+  "name": "chaofan-node",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "dev1": "supervisor server/server.js",
+    "dev": "node app"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "mongodb": "^3.2.3",
+    "request": "^2.88.0",
+    "supervisor": "^0.12.0"
+  }
+}

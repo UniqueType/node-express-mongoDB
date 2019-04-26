@@ -1,0 +1,19 @@
+const start = require('../pages/start').start;
+const upload = require('../pages/upload').upload;
+const getUserInfo = require('../pages/getUserInfo').getUserInfo;
+const queryTabList = require('../pages/queryTabList').queryTabList;
+const queryPunchInRule = require('../pages/queryPunchInRule').queryPunchInRule;
+const csdnCheck = require('../pages/csdnCheck').csdnCheck;
+const login = require('../pages/login').login;
+const queryPersonnelList = require('../pages/queryPersonnelList').queryPersonnelList;
+const changePersonnelList = require('../pages/changePersonnelList').changePersonnelList;
+
+exports.start = start;
+exports.upload = upload;
+exports.getUserInfo = getUserInfo;
+exports.queryTabList = queryTabList;
+exports.queryPunchInRule = queryPunchInRule;
+exports.csdnCheck = csdnCheck;
+exports.login = login;
+exports.queryPersonnelList = queryPersonnelList;
+exports.changePersonnelList = changePersonnelList;

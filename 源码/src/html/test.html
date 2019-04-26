@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test methods by post</title>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<style>
+		div{
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="get">get</div>
+	<div class="post">post</div>
+	<div class="csdnCheck">csdnCheck</div>
+	<div class="queryPunchInRule">queryPunchInRule</div>
+	<script>
+		getEleByClass('get').onclick = function() {
+			$.get('http://192.178.103.140:8888/queryTabList', function(res) {
+				console.log(res);
+				document.getElementsByClassName('get')[0].innerHTML = JSON.stringify(res);
+			});
+		}
+		getEleByClass('csdnCheck').onclick = function() {
+			$.get('http://192.178.103.140:8888/csdnCheck?https://me.csdn.net/api/relation/check?follows=fifteen718,u013263917,fengxiaoxiao_1,li420520,u011573853,haojingus,weixin_39169700,qq1036548849,u011481543,wangdao1212', function(res) {
+				console.log(res);
+				document.getElementsByClassName('csdnCheck')[0].innerHTML = JSON.stringify(res);
+			});
+		}
+		getEleByClass('post').onclick = function() {
+			$.post('http://192.178.103.140:8888/getUserInfo', { name: '刘yang', age: 22, sex: '男' }, function(res) {
+				console.log(res);
+				document.getElementsByClassName('post')[0].innerHTML = JSON.stringify(res);
+			});
+		}
+		getEleByClass('queryPunchInRule').onclick = function() {
+			$.post('http://192.178.103.140:8888/queryPunchInRule', { productNo: '12345678900' }, function(res) {
+				console.log(res);
+				document.getElementsByClassName('queryPunchInRule')[0].innerHTML = JSON.stringify(res);
+			});
+		}
+		function getEleByClass(name) {
+			return document.getElementsByClassName(name)[0];
+		}
+	</script>
+	
+</body>
+</html>
